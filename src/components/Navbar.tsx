@@ -71,6 +71,19 @@ export default function Navbar() {
           </li>
           <li>
             <Link
+              href="/about"
+              style={{
+                fontSize: "0.9375rem",
+                color: "var(--color-ink)",
+                textDecoration: "none",
+                opacity: 0.8,
+              }}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/blog"
               style={{
                 fontSize: "0.875rem",
