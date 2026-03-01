@@ -1,25 +1,27 @@
 # The World Is My Oyster
 
-A personal travel blog built as a professional development project. The goal is to learn modern web development practices by building something real — a site I actually use and write for.
+A personal travel blog — built as a side project to explore working with AI-assisted development tools as part of my continuous learning practice.
 
-## About this project
+## Why I built this
 
-This codebase was built entirely using [Claude Code](https://claude.ai/code), Anthropic's AI coding tool. I used it to design the architecture, write the components, set up the content system, and make decisions about tooling — following current best practices throughout.
+I'm a frontend developer working daily with React, TypeScript, and Tailwind. This project was an opportunity to experiment with [Claude Code](https://claude.ai/code) — Anthropic's AI coding CLI — and see how it fits into a real development workflow.
 
-It's a deliberate learning exercise: rather than following a tutorial, I built a production-ready project from scratch, making real decisions along the way.
+Rather than a tutorial or a throwaway demo, I built something I actually use: a blog where I write about travel. The goal was to make real architectural decisions, follow current best practices, and ship something production-ready — while exploring what AI-assisted development looks like in practice.
+
+Lifelong learning is something I genuinely believe in. This is one expression of that.
 
 ## Tech stack
 
-- **[Next.js 16](https://nextjs.org)** — App Router, static generation
+- **[Next.js 16](https://nextjs.org)** — App Router, static site generation
 - **TypeScript** — fully typed throughout
-- **Tailwind CSS v4** — design tokens via `@theme`, no config file
-- **MDX** — blog posts written in Markdown with frontmatter
+- **Tailwind CSS v4** — CSS-first config via `@theme`, no config file
+- **MDX** — blog posts as Markdown files with frontmatter metadata
 - **[gray-matter](https://github.com/jonschlinkert/gray-matter)** — frontmatter parsing
 - **[next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)** — MDX rendering in React Server Components
 
 ## How the blog works
 
-Posts live in `/content/posts/` as `.mdx` files. Each post has frontmatter:
+Posts live in `/content/posts/` as `.mdx` files with frontmatter:
 
 ```yaml
 ---
@@ -32,7 +34,7 @@ coverImage: "/images/posts/filename.jpg"
 ---
 ```
 
-Images go in `/public/images/posts/`. The site rebuilds statically — every post is pre-rendered at build time.
+Images go in `/public/images/posts/`. Every post is pre-rendered at build time via `generateStaticParams`.
 
 ## Running locally
 
@@ -54,3 +56,7 @@ src/
   lib/posts.ts        # Content utilities (read, parse, sort posts)
   types/post.ts       # Shared TypeScript interfaces
 ```
+
+---
+
+Built by [Gosia Stano](https://malgorzata-stano.netlify.app/) — Frontend Developer
