@@ -34,21 +34,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function PostPage({ params }: PageProps) {
   const { slug } = await params;
 
+  let post;
   try {
-    const post = getPostBySlug(slug);
-
-    return (
-      <article>
-        <PostHeader post={post} />
-        <div
-          className="prose-blog"
-          style={{ padding: "0 1.5rem 6rem" }}
-        >
-          <MDXRemote source={post.content} />
-        </div>
-      </article>
-    );
+    post = getPostBySlug(slug);
   } catch {
     notFound();
   }
+
+  return (
+    <article>
+      <PostHeader post={post} />
+      <div className="prose-blog" style={{ padding: "0 1.5rem 6rem" }}>
+        <MDXRemote source={post.content} />
+      </div>
+    </article>
+  );
 }

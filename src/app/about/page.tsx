@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Hi, I'm Gosia — former English teacher turned frontend developer, currently based in Barcelona.",
 };
 
-const countries = ["Poland", "Italy", "Spain", "Malta", "UK", "Argentina"];
+const countries = ["Poland", "Italy", "Spain", "Malta", "UK"];
 
 export default function AboutPage() {
   return (
@@ -43,30 +43,30 @@ export default function AboutPage() {
             marginBottom: "2rem",
           }}
         >
-          Hi, I'm Gosia.
+          Hi, I&apos;m Gosia.
         </h1>
 
         <div style={{ fontSize: "1.125rem", lineHeight: 1.75, color: "var(--color-ink)" }}>
           <p style={{ marginBottom: "1.5rem" }}>
             Short for Małgorzata — Polish by origin, Barcelona by choice, and everywhere else by curiosity.
-            I've lived and worked across six countries and somehow that number keeps growing.
+            I&apos;ve lived and worked across six countries and somehow that number keeps growing.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            I spent years teaching English around the world — Italy, Spain, Malta, the UK, Argentina — before making the leap
+            I spent years teaching English around the world — Italy, Spain, Malta, the UK — before making the leap
             into frontend development in 2022. No CS degree, no bootcamp. Just a lot of persistence, late nights, and
-            a firm belief that it's never too late to change direction.
+            a firm belief that it&apos;s never too late to change direction.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            Today I'm a frontend developer working with React, TypeScript, Next.js, and Tailwind. I've contributed to
-            DeFi platforms, compliance tooling, and internal developer tools. But this blog isn't about that.
+            Today I&apos;m a frontend developer working with React, TypeScript, Next.js, and Tailwind. I&apos;ve contributed to
+            DeFi platforms, compliance tooling, and internal developer tools. But this blog isn&apos;t about that.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            This blog is about the other thing I've always done: move. Explore. Show up somewhere new and figure it out.
+            This blog is about the other thing I&apos;ve always done: move. Explore. Show up somewhere new and figure it out.
           </p>
           <p>
-            I've always lived by the phrase{" "}
+            I&apos;ve always lived by the phrase{" "}
             <em style={{ color: "var(--color-forest)", fontStyle: "italic" }}>
-              "the world is your oyster"
+              &ldquo;the world is your oyster&rdquo;
             </em>
             {" "}— and I genuinely mean it. I write here about the places I go, the things I notice, and what travel
             gives you that nothing else quite does.
@@ -151,7 +151,7 @@ export default function AboutPage() {
         }}
       >
         <p style={{ fontSize: "1rem", color: "var(--color-ink-muted)", marginBottom: "1.5rem" }}>
-          Want to read about where I've been?
+          Want to read about where I&apos;ve been?
         </p>
         <Link
           href="/blog"
