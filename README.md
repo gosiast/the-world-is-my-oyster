@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The World Is My Oyster
 
-## Getting Started
+A personal travel blog built as a professional development project. The goal is to learn modern web development practices by building something real — a site I actually use and write for.
 
-First, run the development server:
+## About this project
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This codebase was built entirely using [Claude Code](https://claude.ai/code), Anthropic's AI coding tool. I used it to design the architecture, write the components, set up the content system, and make decisions about tooling — following current best practices throughout.
+
+It's a deliberate learning exercise: rather than following a tutorial, I built a production-ready project from scratch, making real decisions along the way.
+
+## Tech stack
+
+- **[Next.js 16](https://nextjs.org)** — App Router, static generation
+- **TypeScript** — fully typed throughout
+- **Tailwind CSS v4** — design tokens via `@theme`, no config file
+- **MDX** — blog posts written in Markdown with frontmatter
+- **[gray-matter](https://github.com/jonschlinkert/gray-matter)** — frontmatter parsing
+- **[next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)** — MDX rendering in React Server Components
+
+## How the blog works
+
+Posts live in `/content/posts/` as `.mdx` files. Each post has frontmatter:
+
+```yaml
+---
+title: "Post Title"
+date: "2025-01-20"
+location: "Lombok, Indonesia"
+category: "Asia"
+excerpt: "Short description shown in cards."
+coverImage: "/images/posts/filename.jpg"
+---
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Images go in `/public/images/posts/`. The site rebuilds statically — every post is pre-rendered at build time.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+content/posts/        # MDX blog posts
+public/images/posts/  # Cover images and in-post photos
+src/
+  app/                # Next.js App Router pages
+  components/         # Navbar, Footer, ArticleCard, HeroSection etc.
+  lib/posts.ts        # Content utilities (read, parse, sort posts)
+  types/post.ts       # Shared TypeScript interfaces
+```
