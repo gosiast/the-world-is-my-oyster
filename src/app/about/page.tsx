@@ -48,11 +48,11 @@ export default function AboutPage() {
 
         <div style={{ fontSize: "1.125rem", lineHeight: 1.75, color: "var(--color-ink)" }}>
           <p style={{ marginBottom: "1.5rem" }}>
-            Short for Małgorzata — Polish by origin, Barcelona by choice, and everywhere else by curiosity.
+            Short for Małgorzata - Polish by origin, Barcelona by choice, and everywhere else by curiosity.
             I&apos;ve lived and worked across six countries and somehow that number keeps growing.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            I spent years teaching English around the world — Italy, Spain, Malta, the UK — before making the leap
+            I spent years teaching English around the world - Italy, Spain, Malta, the UK - before making the leap
             into frontend development in 2022. No CS degree, no bootcamp. Just a lot of persistence, late nights, and
             a firm belief that it&apos;s never too late to change direction.
           </p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <em style={{ color: "var(--color-forest)", fontStyle: "italic" }}>
               &ldquo;the world is your oyster&rdquo;
             </em>
-            {" "}— and I genuinely mean it. I write here about the places I go, the things I notice, and what travel
+            {" "}- and I genuinely mean it. I write here about the places I go, the things I notice, and what travel
             gives you that nothing else quite does.
           </p>
         </div>
